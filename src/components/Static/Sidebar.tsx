@@ -1,9 +1,10 @@
 import styled from "styled-components"
-import img from "../../assets/hotellogo.png"
+import img from "../../assets/logo-dark.png"
 import { MdSpaceDashboard, MdKeyboardArrowDown } from "react-icons/md"
 import {LiaHomeSolid} from "react-icons/lia"
 import { NavLink } from "react-router-dom"
-import {useState} from "react"
+import { useState } from "react"
+import { FiMenu } from "react-icons/fi"
 
 const Sidebar = () => {
 
@@ -13,7 +14,10 @@ const Sidebar = () => {
     }
   return (
     <Container>
-          <img src={img} />
+          <Top>
+              <Menu><FiMenu /></Menu>
+              <img src={img} alt="" />
+          </Top>
 
           <Imagehold>
               <Box>
@@ -76,6 +80,19 @@ const Sidebar = () => {
 }
 
 export default Sidebar
+const Menu = styled.div`
+    color: #526484;
+    font-size: 26px;
+    cursor: pointer;
+`
+const Top = styled.div`
+    width: 100%;
+    display: flex;
+    height: 64px;
+    border-bottom: 1px solid #e5e9f2;
+    padding-left: 15px;
+    align-items: center;
+`
 const Branches = styled.div`
     width: 90%;
     background-color: #fff;
@@ -135,17 +152,13 @@ const Imagehold = styled.div`
 `
 
 const Container = styled.div`
-    width: 18%;
+    width: 21%;
     height: 100vh;
     background-color: #fff;
     position: fixed;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-right: 1px solid #e5e9f2;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow-y: auto;
-    img{
-        height: 130px;
-        margin-top: -25px
-    }
 `

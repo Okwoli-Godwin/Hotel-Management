@@ -139,7 +139,7 @@ const Top = styled.div`
     }
 `
 const Wrapper = styled.div`
-    width: calc(100% - 18%);
+    width: calc(100% - 21%);
     display: flex;
     flex-direction: column;
     padding-right: 25px;
