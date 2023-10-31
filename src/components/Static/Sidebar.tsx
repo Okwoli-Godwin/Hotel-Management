@@ -66,7 +66,9 @@ const Sidebar = () => {
         
         {show1 ? (
             <Branches>
-                <h3>Add Branches</h3>
+                <NavLink to="/admin/addbranch">
+                    <h3>Add Branches</h3>
+                </NavLink>
             </Branches>
         ) : null}
     </Container>

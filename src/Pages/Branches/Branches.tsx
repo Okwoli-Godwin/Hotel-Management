@@ -100,7 +100,7 @@ const Name = styled.div`
     }
 `
 const Card = styled.div`
-    width: 330px;
+    width: 325px;
     background-color: #fff;
     border-radius: 7px;;
     flex-direction: column;
