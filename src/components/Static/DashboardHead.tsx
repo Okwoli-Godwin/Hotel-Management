@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { FiMenu } from "react-icons/fi"
 import { MdOutlineKeyboardArrowDown } from "react-icons/md"
 import { useState } from "react"
 import { BsPerson } from "react-icons/bs"
@@ -14,8 +13,6 @@ const DashboardHead = () => {
   return (
     <Container>
         <Wrapper>
-            <Icon><FiMenu /></Icon>
-            
             <Holder onClick={Toggle}>
                 <img src=""/>
                 <Text>Godwin</Text>
@@ -42,7 +39,7 @@ const DashboardHead = () => {
 export default DashboardHead
 const Profiletext = styled.div`
     font-size: 17px;
-    color: #555;
+    color: #526484;
     font-weight: 400;
     margin-left: 14px;
 `
@@ -102,13 +99,13 @@ const Card = styled.div`
 }
 `
 const Con = styled.div`
-    color: #fff;
+    color: #526484;
     margin-left: 8px;
     font-size: 22px;
     margin-top: 3px;
 `
 const Text = styled.div`
-    color: #fff;
+    color: #526484;
     font-size: 16px;
     font-weight: 400;
 `
@@ -121,28 +118,25 @@ const Holder = styled.div`
         width: 35px;
         height: 35px;
         border-radius: 100px;
+        border: 1px solid #526484;
         background-color: #fff;
         margin-right: 12px;
     }
 `
-const Icon = styled.div`
-    color: #fff;
-    font-size: 22px;
-    cursor: pointer;
-`
 const Wrapper = styled.div`
-    width: calc(100% - 18%);
+    width: calc(100% - 21%);
     display: flex;
     align-items: center;
     padding-left: 13px;
     padding-right: 13px;
-    justify-content: space-between;
+    justify-content: flex-end;
 `
 
 const Container = styled.div`
     width: 100%;
     height: 70px;
-    background-color: #1B212E;
+    background-color: #fff;
     display: flex;
     justify-content: flex-end;
+    border-bottom: 1px solid #e5e9f2;
 `
