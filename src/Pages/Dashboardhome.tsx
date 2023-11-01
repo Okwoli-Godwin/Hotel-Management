@@ -1,53 +1,84 @@
 import styled from "styled-components"
-import { TbBrandBooking } from "react-icons/tb"
-import { FaBed } from "react-icons/fa"
-import { IoIosPeople } from "react-icons/io"
-import { FaSackDollar } from "react-icons/fa6"
 import Dashboardhometable from "./Dashboardhometable"
+import { TbReportAnalytics } from "react-icons/tb"
+import { BsArrowDownShort } from "react-icons/bs"
+import img from "../assets/chart.png"
+import Chartholder from "./Chartholder/Chartholder"
 
 const Dashboardhome = () => {
   return (
     <Container>
         <Wrapper>
             <Top>
-                <h1>Hi, Welcome back!</h1>
-                <p>Admin Dashboard</p>
+                <Hold>
+                    <h1>Dashboard Overview</h1>
+                    <p>Welcome to Dashlite Dashboard</p>
+                </Hold>
+                <Button>
+                    <Icon><TbReportAnalytics /></Icon>
+                    <h3>Reports</h3>
+                </Button>
             </Top>
             
             <Cardhold>
                 <Card1>
-                      <Box><TbBrandBooking /></Box>
-                      <Holder>
-                        <Text>Total Booking</Text>
-                        <Number>1,245</Number>
-                      </Holder>
+                    <h3>Total Booking</h3>
+                    <h4>11,230 <span><Ico><BsArrowDownShort /></Ico>1.93%</span></h4>
+                    
+                    <Monthhold>
+                        <Month>
+                            <p>This Month</p>
+                            <h5>1913</h5>
+                        </Month>
+                        <Month>
+                            <p>This Week</p>
+                            <h5>1125</h5>
+                        </Month>
+                        <img src={img} />
+                    </Monthhold>
                 </Card1>
                 
                 <Card1>
-                      <Box2><FaBed /></Box2>
-                      <Holder>
-                        <Text>Rooms Available</Text>
-                        <Number>287</Number>
-                      </Holder>
+                    <h3>Rooms Available</h3>
+                    <h4>312</h4>
+                    
+                    <Monthhold>
+                        <Month>
+                            <p>Booked (M)</p>
+                            <h5>913</h5>
+                        </Month>
+                        <Month>
+                            <p>Booked (W)</p>
+                            <h5>125</h5>
+                        </Month>
+                        <img src={img} />
+                    </Monthhold>
                 </Card1>
                 
                 <Card1>
-                      <Box3><IoIosPeople /></Box3>
-                      <Holder>
-                        <Text>New Customers</Text>
-                        <Number>1,532</Number>
-                      </Holder>
-                </Card1>
-                
-                <Card1>
-                      <Box4><FaSackDollar /></Box4>
-                      <Holder>
-                        <Text>Total Revenue</Text>
-                        <Number>$22,567</Number>
-                      </Holder>
+                    <h3>Expenses</h3>
+                    <h4>79,358.50 USD</h4>
+                    
+                    <Monthhold>
+                        <Month>
+                            <p>This Month</p>
+                            <h5>3,540.59 USD</h5>
+                        </Month>
+                        <Month>
+                            <p>This Week</p>
+                            <h5>1,259.28 USD</h5>
+                        </Month>
+                    </Monthhold>
                 </Card1>
             </Cardhold>
-            
+              <Chartholder />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
             <Tableholder>
                 <Dashboardhometable />
             </Tableholder>
@@ -57,80 +88,100 @@ const Dashboardhome = () => {
 }
 
 export default Dashboardhome
+const Month = styled.div`
+    display: flex;
+    flex-direction: column;
+    p{
+        font-size: 11px;
+        color: #8094ae;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+    }
+    h5{
+        font-size: 17px;
+        line-height: 1.1;
+        color: #364a63;
+        margin-top: 7px;
+    }
+`
+const Monthhold = styled.div`
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    width: 100%;
+    justify-content: space-between;
+`
+const Ico = styled.div`
+    margin-top: 4px;
+    font-size: 15px;
+`
+const Icon = styled.div`
+    color: #fff;
+    font-size: 20px;
+`
+const Button = styled.button`
+    width: 125px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    background-color: #6576ff;
+    align-items: center;
+    border-radius: 7px;
+    h3{
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        margin-left: 12px;
+    }
+`
+const Hold = styled.div`
+    display: flex;
+    flex-direction: column;
+    h1{
+        font-size: 25px;
+        font-weight: 700;
+        color: #526484;
+    }
+    p{
+        color: #8094ae;
+        font-weight: 500;
+        font-size: 13px;
+        margin-top: 7px;
+    }
+`
 const Tableholder = styled.div`
     width: 100%;
     margin-top: 60px;
 `
-const Number = styled.div`
-    font-size:30px;
-    font-weight: 500;
-    color: #060606;
-`
-const Holder = styled.div`
-    width: 100%;
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-    margin-top: 50px;
-`
-const Text = styled.h1`
-    font-size: 20px;
-    font-weight: 500;
-    color: #060606;
-`
-const Box4 = styled.div`
-    width: 65px;
-    height: 65px;
-    font-size: 27px;
-    background-color: #00bcd4;
-    border-radius: 7px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-`
-const Box3 = styled.div`
-    width: 65px;
-    height: 65px;
-    font-size: 30px;
-    background-color: #4caf50;
-    border-radius: 7px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-`
-const Box2 = styled.div`
-    width: 65px;
-    height: 65px;
-    font-size: 30px;
-    background-color: #ff9800;
-    border-radius: 7px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-`
-const Box = styled.div`
-    width: 65px;
-    height: 65px;
-    font-size: 30px;
-    background-color: #9c27b0;
-    border-radius: 7px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-`
 const Card1 = styled.div`
-    width: 245px;
-    border-radius: 7px;
+    width: 319px;
+    border-radius: 3px;
     padding: 20px;
     background-color: #fff;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 1px solid #dbdfea;
     display: flex;
     flex-direction: column;
     margin-right: 19px;
+    h3{
+        color: #364a63;
+        font-size: 15px;
+        font-weight: 700;
+    }
+    h4{
+        color: #364a63;
+        font-size: 25px;
+        font-weight: 400;
+        margin-top: 5px;
+        display: flex;
+        align-items: center;
+        span{
+            color: #e85347;
+            margin-left: 10px;
+            display: flex;
+            font-size: 14px;
+            margin-top: 4px;
+        }
+    }
 `
 const Cardhold = styled.div`
     width: 100%;
@@ -140,18 +191,10 @@ const Cardhold = styled.div`
 `
 const Top = styled.div`
     display: flex;
-    flex-direction: column;
     margin-top: 30px;
-    h1{
-        font-size: 24px;
-        font-weight: 500;
-        color: #6777ef;
-    }
-    p{
-        color: #555555;
-        font-weight: 500;
-        font-size: 17px;
-    }
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
 `
 const Wrapper = styled.div`
     width: calc(100% - 21%);

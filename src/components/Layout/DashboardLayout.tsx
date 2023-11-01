@@ -8,7 +8,9 @@ const DashboardLayout = () => {
         <Sidebar />
         <Wrapper>
         <DashboardHead />
-            <Outlet />
+            <div className="mt-[70px]">
+              <Outlet />
+            </div>
         </Wrapper>
     </Container>
   )
