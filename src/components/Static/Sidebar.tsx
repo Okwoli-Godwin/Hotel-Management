@@ -374,6 +374,7 @@ const Container = styled.div`
     border-right: 1px solid #e5e9f2;
     display: flex;
     flex-direction: column;
+    z-index: 5;
     align-items: center;
     overflow-y: auto;
 `
