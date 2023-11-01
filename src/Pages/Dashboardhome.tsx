@@ -4,6 +4,7 @@ import { TbReportAnalytics } from "react-icons/tb"
 import { BsArrowDownShort } from "react-icons/bs"
 import img from "../assets/chart.png"
 import Chartholder from "./Chartholder/Chartholder"
+import Customerhome from "./Chartholder/Customerhome"
 
 const Dashboardhome = () => {
   return (
@@ -71,19 +72,13 @@ const Dashboardhome = () => {
                     </Monthhold>
                 </Card1>
             </Cardhold>
-              <Chartholder />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
+                  <Chartholder />
             <Tableholder>
                 <Dashboardhometable />
+                {/* <Chartholder /> */}
             </Tableholder>
             
-            <Chartholder />
+            <Customerhome />
         </Wrapper>
     </Container>
   )
@@ -154,6 +149,7 @@ const Hold = styled.div`
 const Tableholder = styled.div`
     width: 100%;
     margin-top: 60px;
+    flex-direction: column;
 `
 const Card1 = styled.div`
     width: 319px;
@@ -204,11 +200,11 @@ const Wrapper = styled.div`
     flex-direction: column;
     padding-right: 25px;
     padding-left: 25px;
+    height: 100%;
 `
 
 const Container = styled.div`
     width: 100%;
-    height: 100%;
     background-color: #F0F3FB;
     display: flex;
     justify-content: flex-end;

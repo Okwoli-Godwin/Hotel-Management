@@ -5,12 +5,10 @@ import styled from "styled-components"
 const DashboardLayout = () => {
   return (
     <Container>
+        <DashboardHead />
         <Sidebar />
         <Wrapper>
-        <DashboardHead />
-            <div className="mt-[70px]">
-              <Outlet />
-            </div>
+            <Outlet />
         </Wrapper>
     </Container>
   )
@@ -20,13 +18,16 @@ export default DashboardLayout
 
 const Wrapper = styled.div`
   width: 100%;
-  flex-direction: column;
   display: flex;
+  margin-top: 70px;
+  min-height: 100vh;
+  /* background-color: red; */
+  /* height: 200vh; */
 `;
 
 const Container = styled.div`
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   display: flex;
   /* justify-content: flex-end; */
 `;

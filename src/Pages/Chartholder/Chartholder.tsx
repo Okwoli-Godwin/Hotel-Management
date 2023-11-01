@@ -123,7 +123,6 @@ const Salesholder = styled.div`
 const Container = styled.div`
     width: 100%;
     display: flex;
-    height: 20px;
     flex-wrap: wrap;
     margin-top: 40px;
     justify-content: space-between;
