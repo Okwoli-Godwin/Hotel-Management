@@ -82,6 +82,8 @@ const Dashboardhome = () => {
             <Tableholder>
                 <Dashboardhometable />
             </Tableholder>
+            
+            <Chartholder />
         </Wrapper>
     </Container>
   )

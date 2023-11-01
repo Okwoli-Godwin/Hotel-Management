@@ -1,4 +1,4 @@
-
+import styled from "styled-components"
 
 const Dashboardhometable = () => {
     const tableItems = [
@@ -44,17 +44,15 @@ const Dashboardhometable = () => {
         },
     ]
   return (
-    <div className="max-w-screen-xl mx-auto px-4 md:px-8 bg-[#fff] rounded-[7px] pt-[28px] pb-[28px] shadow-md">
+    <div className="max-w-screen-xl mx-auto px-4 md:px-8 bg-[#fff] rounded-[7px] pt-[28px] pb-[28px]  border-[#dbdfea] border-[1px]">
             <div className="items-start justify-between md:flex">
                 <div className="max-w-lg">
-                    <h3 className="text-gray-800 text-xl font-bold sm:text-2xl">
-                        Latest Booking Details
-                    </h3>
+                    <P>Latest Booking Details</P>
                 </div>
             </div>
             <div className="mt-12 shadow-sm border rounded-lg overflow-x-auto">
                 <table className="w-full table-auto text-sm text-left">
-                    <thead className="bg-gray-50 text-[#060606] font-semibold border-b">
+                    <thead className="bg-gray-50 text-[#364a63] font-semibold border-b">
                         <tr>
                             <th className="py-3 px-6">Name</th>
                             <th className="py-3 px-6">Phone</th>
@@ -80,14 +78,6 @@ const Dashboardhometable = () => {
                                             {item.status}
                                         </span>
                                     </td>
-                                    <td className="text-right px-6 whitespace-nowrap">
-                                        <a href="javascript:void()" className="py-2 px-3 font-medium text-indigo-600 hover:text-indigo-500 duration-150 hover:bg-gray-50 rounded-lg">
-                                            Edit
-                                        </a>
-                                        <button className="py-2 leading-none px-3 font-medium text-red-600 hover:text-red-500 duration-150 hover:bg-gray-50 rounded-lg">
-                                            Delete
-                                        </button>
-                                    </td>
                                 </tr>
                             ))
                         }
@@ -99,3 +89,10 @@ const Dashboardhometable = () => {
 }
 
 export default Dashboardhometable
+
+const P = styled.div`
+    font-weight: 600;
+    line-height: 1.1;
+    color: #364a63;
+    font-size: 1.05rem;
+`
