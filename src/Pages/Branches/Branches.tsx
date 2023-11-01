@@ -1,12 +1,19 @@
 import styled from 'styled-components'
 import img from "../../assets/hotel.jpeg"
+import { BsThreeDotsVertical } from "react-icons/bs"
+import { useState } from "react"
+
 
 const Branches = () => {
+    const [show, setShow] = useState(false)
+    const Toggle = () => {
+        setShow(!show)
+    }
   return (
     <Container>
         <Wrapper>
             <Top>
-                <h1>Branches</h1>
+                <h1>Branches Overview</h1>
                 <button>Add Branch</button>
             </Top>
             
@@ -20,7 +27,7 @@ const Branches = () => {
                         <h2>Location: <span>9 Malcolm Fraser Street, Asokoro, Abuja</span></h2>
                     </Location>
                     <Buttonhold>
-                        <button>View Dashboard</button>
+                        <button><BsThreeDotsVertical /></button>
                     </Buttonhold>
                 </Card>
                 
@@ -33,7 +40,7 @@ const Branches = () => {
                         <h2>Location: <span>9 Malcolm Fraser Street, Asokoro, Abuja</span></h2>
                     </Location>
                     <Buttonhold>
-                        <button>View Dashboard</button>
+                        <button><BsThreeDotsVertical /></button>
                     </Buttonhold>
                 </Card>
                 
@@ -46,7 +53,18 @@ const Branches = () => {
                         <h2>Location: <span>9 Malcolm Fraser Street, Asokoro, Abuja</span></h2>
                     </Location>
                     <Buttonhold>
-                        <button>View Dashboard</button>
+                        <span className="relative flex h-3 w-3">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
+                        </span>
+                        <button onClick={Toggle}>
+                            <BsThreeDotsVertical />
+                            {show ? (
+                                <Drop>
+                                
+                                </Drop>
+                            ): null}
+                        </button>
                     </Buttonhold>
                 </Card>
             </Branchhold>
@@ -56,21 +74,28 @@ const Branches = () => {
 }
 
 export default Branches
+const Drop = styled.div`
+    position: absolute;
+    width: 170px;
+    height: 100px;
+    left: 0;
+    right: 0;
+    margin-left: -150px;
+    margin-top: 10px;
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid #dbdfea;
+`
 const Buttonhold = styled.div`
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
     padding-right: 12px;
+    padding-left: 12px;
     button{
-        width: 150px;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 3px;
-        color: #fff;
-        background-color: #1B212E;
-        margin-top: 30px;
+        margin-top: 20px;
+        position: relative;
     }
 `
 const Location = styled.div`
@@ -100,14 +125,14 @@ const Name = styled.div`
     }
 `
 const Card = styled.div`
-    width: 325px;
+    width: 318px;
     background-color: #fff;
     border-radius: 7px;;
     flex-direction: column;
-    overflow: hidden;
-    margin-right: 25px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* overflow: hidden; */
+    margin-right: 20px;
     padding-bottom: 25px;
+    border: 1px solid #dbdfea;
     img{
         height: 280px;
         width: 100%;
@@ -133,9 +158,9 @@ const Top = styled.div`
         background-color: #6777ef;
     }
     h1{
-        font-size: 24px;
-        font-weight: 500;
-        color: #6777ef;
+        font-size: 25px;
+        font-weight: 700;
+        color: #526484;
     }
 `
 const Wrapper = styled.div`
