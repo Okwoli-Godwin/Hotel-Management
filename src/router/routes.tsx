@@ -5,6 +5,7 @@ import Signin from "../Pages/Auth/Signin";
 import Optionpage from "../Pages/Optionpage";
 import Branches from "../Pages/Branches/Branches";
 import Addbranch from "../Pages/Branches/Addbranch";
+import Bookingshome from "../Pages/Bookings/Bookingshome";
 
 export const Element = createBrowserRouter([
     {
@@ -30,6 +31,10 @@ export const Element = createBrowserRouter([
             {
                 path: "/admin/addbranch",
                 element: <Addbranch />
+            },
+            {
+                path: "/admin/bookings",
+                element: <Bookingshome />
             }
         ]
     }

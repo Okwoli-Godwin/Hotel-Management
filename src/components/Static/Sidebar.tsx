@@ -89,7 +89,7 @@ const Sidebar = () => {
             </Branches>
         ) : null}
         
-        <NavLink to="" style={({isActive}) => {
+        <NavLink to="/admin/bookings" style={({isActive}) => {
             return {
                 height: isActive ? "50px" : "50px",
                 alignItems: isActive ? "center" : "center",
