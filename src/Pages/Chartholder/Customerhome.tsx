@@ -91,7 +91,6 @@ const Customerhome = () => {
                     <p className="text-[12px] text-[#8094ae]">info@softnio.com</p>
                 </div>
              </div>
-             <div className="text-[18px] cursor-pointer"><BiDotsHorizontalRounded /></div>
            </Top2>
            
            <Top2>
@@ -104,7 +103,6 @@ const Customerhome = () => {
                     <p className="text-[12px] text-[#8094ae]">info@softnio.com</p>
                 </div>
              </div>
-             <div className="text-[18px] cursor-pointer"><BiDotsHorizontalRounded /></div>
            </Top2>
            
            <Top2>
@@ -117,7 +115,6 @@ const Customerhome = () => {
                     <p className="text-[12px] text-[#8094ae]">info@softnio.com</p>
                 </div>
              </div>
-             <div className="text-[18px] cursor-pointer"><BiDotsHorizontalRounded /></div>
            </Top2>
            
            <Top2>
@@ -130,7 +127,6 @@ const Customerhome = () => {
                     <p className="text-[12px] text-[#8094ae]">info@softnio.com</p>
                 </div>
              </div>
-             <div className="text-[18px] cursor-pointer"><BiDotsHorizontalRounded /></div>
            </Top2>
            
            <Top2>
@@ -143,7 +139,6 @@ const Customerhome = () => {
                     <p className="text-[12px] text-[#8094ae]">info@softnio.com</p>
                 </div>
              </div>
-             <div className="text-[18px] cursor-pointer"><BiDotsHorizontalRounded /></div>
            </Top2>
         </Activitieshold>
     </Container>
