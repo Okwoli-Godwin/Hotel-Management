@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import {useState} from "react"
 
-const Addbooking = () => {
+const Addroom = () => {
     const [previwImage, setPreviewImage] = useState<string>("")
     const [foodImg, setfoodImg] = useState<File | null>(null);
 
@@ -17,66 +17,22 @@ const Addbooking = () => {
     <Container>
         <Wrapper>
             <Top>
-                <h1>Add Booking</h1>
+                <h1>Manage Room Details</h1>
             </Top>
             <Card>
                 <Namehold>
-                    <label>First Name</label>
-                    <input placeholder="First Name"/>
+                    <label>Room Number</label>
+                    <input type="number" placeholder="Room Number"/>
                 </Namehold>
                 <Namehold>
-                    <label>Last Name</label>
-                    <input placeholder="Last Name"/>
-                </Namehold>
-                <Namehold>
-                    <label>Gender</label>
-                    <select>
-                        <option value="">Select Gender</option>
-                        <option value="">Male</option>
-                        <option value="">Female</option>
-                        <option value="">Other</option>
-                    </select>
-                </Namehold>
-                <Namehold>
-                    <label>Phone</label>
+                    <label>Phone Number</label>
                     <input type="number" placeholder="Phone no"/>
                 </Namehold>
                 <Namehold>
-                    <label>Email Address</label>
-                    <input placeholder="Email Address"/>
-                </Namehold>
-                <Namehold>
-                    <label>Address</label>
-                    <input placeholder="Address"/>
-                </Namehold>
-                <Namehold>
-                    <label>Select Room Type</label>
+                    <label>Status</label>
                     <select>
-                        <option value="">Select Room Type</option>
-                        <option value="">Delux Super Delux</option>
-                        <option value="">Single</option>
-                        <option value="">Double</option>
-                    </select>
-                </Namehold>
-                <Namehold>
-                    <label>Arrive Date</label>
-                    <input type="date" placeholder="Address"/>
-                </Namehold>
-                <Namehold>
-                    <label>Depart Date</label>
-                    <input type="date" placeholder="Address"/>
-                </Namehold>
-                <Namehold>
-                    <label>Total Person</label>
-                    <input type="number" placeholder="Total Person"/>
-                </Namehold>
-                <Namehold>
-                    <label>Select a package</label>
-                    <select>
-                        <option value="">Starter Package</option>
-                        <option value="">Honeymoon Package</option>
-                        <option value="">Vacation Package</option>
-                        <option value="">Spring Package</option>
+                        <option value="">Active</option>
+                        <option value="">Inactive</option>
                     </select>
                 </Namehold>
                 <Namehold>
@@ -86,12 +42,8 @@ const Addbooking = () => {
                 <Imagehold>
                     <img src={previwImage} />
                 </Imagehold>
-                <Note>
-                    <label>Note</label>
-                    <textarea></textarea>
-                </Note>
                 <Button>
-                    Add Booking
+                    Add Room
                 </Button>
             </Card>
         </Wrapper>
@@ -99,7 +51,7 @@ const Addbooking = () => {
   )
 }
 
-export default Addbooking
+export default Addroom
 const Button = styled.button`
     width: 130px;
     height: 40px;
@@ -157,7 +109,7 @@ const Namehold = styled.div`
     margin-bottom: 25px;
     select{
         display: block;
-        width: 310px;
+        width: 470px;
     padding: 0.4375rem 1rem;
     font-size: .8125rem;
     font-weight: 400;
@@ -174,7 +126,7 @@ const Namehold = styled.div`
     }
     input{
         display: block;
-        width: 310px;
+        width: 470px;
     padding: 0.4375rem 1rem;
     font-size: .8125rem;
     font-weight: 400;
