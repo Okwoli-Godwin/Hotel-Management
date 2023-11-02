@@ -6,6 +6,8 @@ import Optionpage from "../Pages/Optionpage";
 import Branches from "../Pages/Branches/Branches";
 import Addbranch from "../Pages/Branches/Addbranch";
 import Bookingshome from "../Pages/Bookings/Bookingshome";
+import Addbooking from "../Pages/Bookings/Addbooking"
+import Allrooms from "../Pages/Rooms/Allrooms";
 
 export const Element = createBrowserRouter([
     {
@@ -35,6 +37,14 @@ export const Element = createBrowserRouter([
             {
                 path: "/admin/bookings",
                 element: <Bookingshome />
+            },
+            {
+                path: "/admin/addbooking",
+                element: <Addbooking />
+            },
+            {
+                path: "/admin/rooms",
+                element: <Allrooms />
             }
         ]
     }

@@ -113,14 +113,14 @@ const Sidebar = () => {
         
         {show2 ? (
             <Booking>
-                <NavLink to="/admin/addbranch">
+                <NavLink to="/admin/addbooking">
                       <h3>Add Booking</h3>
-                      <h3>Edit Booking</h3>
                 </NavLink>
+                <h3>Edit Booking</h3>
             </Booking>
         ) : null}
         
-        <NavLink to="" style={({isActive}) => {
+        <NavLink to="/admin/rooms" style={({isActive}) => {
             return {
                 height: isActive ? "50px" : "50px",
                 alignItems: isActive ? "center" : "center",
