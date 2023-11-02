@@ -144,7 +144,7 @@ const Sidebar = () => {
         
         {show3 ? (
             <Booking>
-                <NavLink to="/admin/addbranch">
+                <NavLink to="/admin/roomtypes">
                       <h3>Room Types</h3>
                 </NavLink>
             </Booking>

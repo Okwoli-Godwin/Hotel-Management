@@ -8,6 +8,7 @@ import Addbranch from "../Pages/Branches/Addbranch";
 import Bookingshome from "../Pages/Bookings/Bookingshome";
 import Addbooking from "../Pages/Bookings/Addbooking"
 import Allrooms from "../Pages/Rooms/Allrooms";
+import Roomtypes from "../Pages/Rooms/Roomtypes";
 
 export const Element = createBrowserRouter([
     {
@@ -45,6 +46,10 @@ export const Element = createBrowserRouter([
             {
                 path: "/admin/rooms",
                 element: <Allrooms />
+            },
+            {
+                path: "/admin/roomtypes",
+                element: <Roomtypes />
             }
         ]
     }
