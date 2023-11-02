@@ -147,6 +147,12 @@ const Sidebar = () => {
                 <NavLink to="/admin/roomtypes">
                       <h3>Room Types</h3>
                 </NavLink>
+                <NavLink to="/admin/addroomtype">
+                    <h3>Add Room Types</h3>
+                </NavLink>
+                <NavLink to="/admin/addroom">
+                    <h3>Add Room</h3>
+                </NavLink>
             </Booking>
         ) : null}
         

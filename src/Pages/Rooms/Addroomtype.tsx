@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import {useState} from "react"
 
-const Addbooking = () => {
+const Addroomtype = () => {
     const [previwImage, setPreviewImage] = useState<string>("")
     const [foodImg, setfoodImg] = useState<File | null>(null);
 
@@ -17,66 +17,22 @@ const Addbooking = () => {
     <Container>
         <Wrapper>
             <Top>
-                <h1>Add Booking</h1>
+                <h1>Manage Room Type</h1>
             </Top>
             <Card>
                 <Namehold>
-                    <label>First Name</label>
-                    <input placeholder="First Name"/>
+                    <label>Room Name</label>
+                    <input placeholder="Room Name"/>
                 </Namehold>
                 <Namehold>
-                    <label>Last Name</label>
-                    <input placeholder="Last Name"/>
+                    <label>Room Price</label>
+                    <input type="number" placeholder="Room Price"/>
                 </Namehold>
                 <Namehold>
-                    <label>Gender</label>
+                    <label>Status</label>
                     <select>
-                        <option value="">Select Gender</option>
-                        <option value="">Male</option>
-                        <option value="">Female</option>
-                        <option value="">Other</option>
-                    </select>
-                </Namehold>
-                <Namehold>
-                    <label>Phone</label>
-                    <input type="number" placeholder="Phone no"/>
-                </Namehold>
-                <Namehold>
-                    <label>Email Address</label>
-                    <input placeholder="Email Address"/>
-                </Namehold>
-                <Namehold>
-                    <label>Address</label>
-                    <input placeholder="Address"/>
-                </Namehold>
-                <Namehold>
-                    <label>Select Room Type</label>
-                    <select>
-                        <option value="">Select Room Type</option>
-                        <option value="">Delux Super Delux</option>
-                        <option value="">Single</option>
-                        <option value="">Double</option>
-                    </select>
-                </Namehold>
-                <Namehold>
-                    <label>Arrive Date</label>
-                    <input type="date" placeholder="Address"/>
-                </Namehold>
-                <Namehold>
-                    <label>Depart Date</label>
-                    <input type="date" placeholder="Address"/>
-                </Namehold>
-                <Namehold>
-                    <label>Total Person</label>
-                    <input type="number" placeholder="Total Person"/>
-                </Namehold>
-                <Namehold>
-                    <label>Select a package</label>
-                    <select>
-                        <option value="">Starter Package</option>
-                        <option value="">Honeymoon Package</option>
-                        <option value="">Vacation Package</option>
-                        <option value="">Spring Package</option>
+                        <option value="">Active</option>
+                        <option value="">Inactive</option>
                     </select>
                 </Namehold>
                 <Namehold>
@@ -87,11 +43,15 @@ const Addbooking = () => {
                     <img src={previwImage} />
                 </Imagehold>
                 <Note>
-                    <label>Note</label>
+                    <label>Room Description</label>
+                    <textarea></textarea>
+                </Note>
+                <Note>
+                    <label>Room Facilities</label>
                     <textarea></textarea>
                 </Note>
                 <Button>
-                    Add Booking
+                    Add Room
                 </Button>
             </Card>
         </Wrapper>
@@ -99,7 +59,7 @@ const Addbooking = () => {
   )
 }
 
-export default Addbooking
+export default Addroomtype
 const Button = styled.button`
     width: 130px;
     height: 40px;
@@ -157,7 +117,7 @@ const Namehold = styled.div`
     margin-bottom: 25px;
     select{
         display: block;
-        width: 310px;
+        width: 470px;
     padding: 0.4375rem 1rem;
     font-size: .8125rem;
     font-weight: 400;
@@ -174,7 +134,7 @@ const Namehold = styled.div`
     }
     input{
         display: block;
-        width: 310px;
+        width: 470px;
     padding: 0.4375rem 1rem;
     font-size: .8125rem;
     font-weight: 400;
