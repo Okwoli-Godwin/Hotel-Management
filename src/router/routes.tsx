@@ -14,6 +14,7 @@ import Addroom from "../Pages/Rooms/Addroom";
 import Reserverdbooking from "../Pages/Bookings/Reserverdbooking";
 import Checkedin from "../Pages/Bookings/Checkedin";
 import Checkedout from "../Pages/Bookings/Checkedout";
+import Guests from "../Pages/Guests/Guests";
 
 export const Element = createBrowserRouter([
     {
@@ -75,6 +76,10 @@ export const Element = createBrowserRouter([
             {
                 path: "/admin/addroom",
                 element: <Addroom />
+            },
+            {
+                path: "/admin/allguests",
+                element: <Guests />
             }
         ]
     }
