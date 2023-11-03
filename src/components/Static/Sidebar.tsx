@@ -119,6 +119,9 @@ const Sidebar = () => {
                 <NavLink to="/admin/reserved-booking">
                     <h3>Reserved Bookings</h3>
                 </NavLink>
+                <NavLink to="/admin/checked-in-bookings">
+                    <h3>Checked In Booking</h3>
+                </NavLink>
             </Booking>
         ) : null}
         
