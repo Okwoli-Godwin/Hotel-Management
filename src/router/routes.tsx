@@ -11,6 +11,7 @@ import Allrooms from "../Pages/Rooms/Allrooms";
 import Roomtypes from "../Pages/Rooms/Roomtypes";
 import Addroomtype from "../Pages/Rooms/Addroomtype";
 import Addroom from "../Pages/Rooms/Addroom";
+import Reserverdbooking from "../Pages/Bookings/Reserverdbooking";
 
 export const Element = createBrowserRouter([
     {
@@ -44,6 +45,10 @@ export const Element = createBrowserRouter([
             {
                 path: "/admin/addbooking",
                 element: <Addbooking />
+            },
+            {
+                path: "/admin/reserved-booking",
+                element: <Reserverdbooking />
             },
             {
                 path: "/admin/rooms",
