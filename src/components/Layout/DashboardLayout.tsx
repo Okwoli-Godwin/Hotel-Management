@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom"
-import { DashboardHead, Sidebar } from ".."
+import { DashboardHead, Sidebar, SideMenu } from ".."
 import styled from "styled-components"
 
 const DashboardLayout = () => {

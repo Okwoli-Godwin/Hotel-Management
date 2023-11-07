@@ -164,7 +164,7 @@ const Sidebar = () => {
             </Booking>
         ) : null}
         
-        <NavLink to="" style={({isActive}) => {
+        <NavLink to="/admin/allguests" style={({isActive}) => {
             return {
                 height: isActive ? "50px" : "50px",
                 alignItems: isActive ? "center" : "center",
@@ -188,7 +188,7 @@ const Sidebar = () => {
         
         {show4 ? (
             <Booking>
-                <NavLink to="/admin/addbranch">
+                <NavLink to="/admin/add-guests">
                       <h3>Add Guest</h3>
                 </NavLink>
             </Booking>
@@ -212,7 +212,7 @@ const Sidebar = () => {
             </Dashboard>
         </NavLink>
         
-        <NavLink to="" style={({isActive}) => {
+        <NavLink to="/admin/staffs" style={({isActive}) => {
             return {
                 height: isActive ? "50px" : "50px",
                 alignItems: isActive ? "center" : "center",
@@ -236,7 +236,7 @@ const Sidebar = () => {
         
         {show5 ? (
             <Booking>
-                <NavLink to="">
+                <NavLink to="/admin/addstaff">
                       <h3>Add Staff Details</h3>
                 </NavLink>
             </Booking>

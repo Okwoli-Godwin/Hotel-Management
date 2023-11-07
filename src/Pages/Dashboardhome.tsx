@@ -78,7 +78,7 @@ const Dashboardhome = () => {
                 {/* <Chartholder /> */}
             </Tableholder>
             
-            <Customerhome />
+              <Customerhome />
         </Wrapper>
     </Container>
   )
@@ -195,7 +195,7 @@ const Top = styled.div`
     justify-content: space-between;
 `
 const Wrapper = styled.div`
-    width: calc(100% - 21%);
+    width: 100%;
     display: flex;
     flex-direction: column;
     padding-right: 25px;
