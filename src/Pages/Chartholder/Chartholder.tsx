@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { BsArrowUpShort, BsArrowDownShort } from "react-icons/bs"
 import DashboardChart from "../DashboardChart"
+import DashboardPieChart from "../DashboardPieChart"
 
 const Chartholder = () => {
     const data = [
@@ -81,12 +82,22 @@ const Chartholder = () => {
             <div className="flex flex-col">
                 <h6>Room Booking Chart</h6>
             </div>
+            <Hol>
+                <DashboardPieChart />
+            </Hol>
         </Roomholder>
     </Container>
   )
 }
 
 export default Chartholder
+const Hol = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+`
 const Hold = styled.div`
     width: 100%;
     margin-top: 30px;
@@ -124,6 +135,7 @@ const Roomholder = styled.div`
     width: 48%;
     padding: 20px;
     background-color: #fff;
+    overflow: hidden;
     border-radius: 7px;
     border: 1px solid #dbdfea;
     display: flex;

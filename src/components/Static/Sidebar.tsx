@@ -271,6 +271,28 @@ const Sidebar = () => {
                 </NavLink>
             </Booking>
         ) : null}
+        
+        <NavLink to="/admin/calendar" style={({isActive}) => {
+            return {
+                height: isActive ? "50px" : "50px",
+                alignItems: isActive ? "center" : "center",
+                display: isActive ? "flex" : "flex",
+                color: isActive ? "#7f8dff" : "#526484",
+                width: isActive ? "90%" : "90%",
+                marginTop: isActive ? "8px" : "8px",
+                paddingLeft: isActive ? "11px" : "15px",
+                borderRadius: isActive ? "7px" : "7px",
+                justifyContent: isActive ? "space-between" : "space-between"
+            }
+        }}>
+            <Branch onClick={Toggle6}>
+              <div className="flex">
+                <Icon3><TbDiscountCheckFilled /></Icon3>
+                <Textdash>Calendar</Textdash>
+              </div>
+              <Ico6><MdKeyboardArrowDown /></Ico6>
+            </Branch>
+        </NavLink>
     </Container>
   )
 }
