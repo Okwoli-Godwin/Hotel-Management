@@ -1,7 +1,41 @@
 import styled from "styled-components"
 import { BsArrowUpShort, BsArrowDownShort } from "react-icons/bs"
+import DashboardChart from "../DashboardChart"
 
 const Chartholder = () => {
+    const data = [
+  { month: 'Day 1', value: 30 },
+  { month: 'Day 2', value: 40 },
+  { month: 'Day 3', value: 20 },
+  { month: 'Day 4', value: 60 },
+  { month: 'Day 5', value: 45 },
+  { month: 'Day 6', value: 70 },
+  { month: 'Day 7', value: 55 },
+  { month: 'Day 8', value: 80 },
+  { month: 'Day 9', value: 65 },
+  { month: 'Day 10', value: 90 },
+  { month: 'Day 11', value: 75 },
+  { month: 'Day 12', value: 100 },
+  { month: 'Day 13', value: 63 },
+  { month: 'Day 14', value: 80 },
+  { month: 'Day 15', value: 45 },
+  { month: 'Day 16', value: 30 },
+  { month: 'Day 17', value: 85 },
+  { month: 'Day 18', value: 70 },
+  { month: 'Day 19', value: 65 },
+  { month: 'Day 20', value: 15 },
+  { month: 'Day 21', value: 30 },
+  { month: 'Day 22', value: 50 },
+  { month: 'Day 23', value: 75 },
+  { month: 'Day 24', value: 40 },
+  { month: 'Day 25', value: 69 },
+  { month: 'Day 26', value: 84 },
+  { month: 'Day 27', value: 70 },
+  { month: 'Day 28', value: 55 },
+  { month: 'Day 29', value: 40 },
+  { month: 'Day 30', value: 90 },
+  { month: 'Day 31', value: 50 },
+];
   return (
     <Container>
         <Salesholder>
@@ -38,6 +72,9 @@ const Chartholder = () => {
                     </div>
                 </Monthly>
             </Rangeholder>
+            <Hold>
+                <DashboardChart data={data}/>
+            </Hold>
         </Salesholder>
         
         <Roomholder>
@@ -50,6 +87,10 @@ const Chartholder = () => {
 }
 
 export default Chartholder
+const Hold = styled.div`
+    width: 100%;
+    margin-top: 30px;
+`
 const P = styled.p`
     color: #1ee0ac;
 `

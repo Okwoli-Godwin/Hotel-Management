@@ -195,7 +195,7 @@ const Top = styled.div`
     justify-content: space-between;
 `
 const Wrapper = styled.div`
-    width: 100%;
+    width: calc(100% - 21%);
     display: flex;
     flex-direction: column;
     padding-right: 25px;
