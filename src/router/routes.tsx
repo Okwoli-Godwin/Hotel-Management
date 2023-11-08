@@ -18,6 +18,7 @@ import Guests from "../Pages/Guests/Guests";
 import Addguests from "../Pages/Guests/Addguests";
 import Staffs from "../Pages/Staffs/Staffs";
 import Addstaffs from "../Pages/Staffs/Addstaffs";
+import MyCalendar from "../Pages/MyCalendar";
 
 export const Element = createBrowserRouter([
     {
@@ -95,6 +96,10 @@ export const Element = createBrowserRouter([
             {
                 path: "/admin/addstaff",
                 element: <Addstaffs />
+            },
+            {
+                path: "/admin/calendar",
+                element: <MyCalendar />
             }
         ]
     }

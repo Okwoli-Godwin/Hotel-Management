@@ -140,4 +140,5 @@ const Container = styled.div`
     justify-content: flex-end;
     border-bottom: 1px solid #e5e9f2;
     position: fixed;
+    z-index: 1;
 `
