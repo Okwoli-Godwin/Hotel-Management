@@ -3,9 +3,7 @@ import { Element } from "./router/routes"
 
 const App = () => {
   return (
-    <div>
       <RouterProvider router={Element}/>
-    </div>
   )
 }
 
