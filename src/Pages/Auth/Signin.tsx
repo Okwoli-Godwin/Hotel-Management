@@ -1,24 +1,114 @@
 import styled from "styled-components"
 import img from "../../assets/hotel.jpeg"
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup"
+import { useForm } from "react-hook-form"
+import { useMutation } from "@tanstack/react-query"
+import { AdminLogin } from "../../Api/Authapi/Adminapi";
+import { MoonLoader } from "react-spinners"
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { Admin } from "../../Api/ReduxSate";
+import Swal from "sweetalert2";
 
 const Signin = () => {
+
+    const dispatch = useDispatch()
+
+    const navigate = useNavigate()
+
+    const schema: any = yup
+        .object({
+            email: yup.string().required("Email is required").email('Invalid Email'),
+            password: yup.string().required("Password is required"),
+        })
+        .required();
+    type formData = yup.InferType<typeof schema>;
+
+    const {
+        handleSubmit,
+        reset,
+        register,
+    } = useForm<formData>({
+        resolver: yupResolver(schema)
+    })
+
+    const postData = useMutation({
+        mutationKey: ["admin"],
+        mutationFn: AdminLogin,
+
+        onSuccess: (data) => {
+            dispatch(Admin(data?.data))
+            Swal.fire({
+                title: "Login successfull",
+                html: "success",
+                timer: 2000,
+                icon: "success"
+            });
+            reset();
+            navigate("/options")
+        },
+
+        onError: (error: any) => {
+            console.log("error message", error)
+            if (error.message === "Network Error") {
+                Swal.fire({
+                    title: error.message,
+                    text: error.code,
+                    timer: 2000,
+                    icon: "error"
+                });
+            } else {
+                Swal.fire({
+                    title: "Wrong username or password",
+                    timer: 2000,
+                    text: "error",
+                    icon: "error"
+                })
+            }
+        }
+    })
+
+    const Submit = (event: any) => {
+        event?.preventDefault();
+        handleSubmit((data: any) => {
+            postData.mutate(data)
+        })();
+    }
+
   return (
     <Container>
         <Wrapper>
-            <Cardhold>
+            <Cardhold onSubmit={Submit}>
             <h2>Hotel Management</h2>
             
             <Emailhold>
                 <h3>Email address</h3>
-                <input type="text" placeholder="Enter your email"/>
+                <input 
+                    {...register("email")}
+                    required
+                    type="email" 
+                    placeholder="Enter your email"
+                />
             </Emailhold>
             
             <Password>
                 <h3>Password</h3>
-                <input type="password" placeholder="Enter your email"/>
+                <input 
+                    {...register("password")}
+                    required
+                    type="password" 
+                    placeholder="Enter your email"
+                />
             </Password>
             
-            <Button>Log In</Button>
+            <Button type="submit">
+                {postData?.isSuccess ? (
+                    <MoonLoader size={30} color="#fff" />
+                ) : (
+                    "Log In"
+                )}
+            </Button>
         </Cardhold>
         </Wrapper>
     </Container>
@@ -80,7 +170,7 @@ const Emailhold = styled.div`
     }
 `
 
-const Cardhold = styled.div`
+const Cardhold = styled.form`
     width: 430px;
     padding: 35px;
     background-color: #fff;
