@@ -152,7 +152,7 @@ const Tableholder = styled.div`
     flex-direction: column;
 `
 const Card1 = styled.div`
-    width: 319px;
+    width: 280px;
     border-radius: 3px;
     padding: 20px;
     background-color: #fff;
