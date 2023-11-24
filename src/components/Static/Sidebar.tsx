@@ -374,7 +374,7 @@ const Ico2 = styled.div`
     font-size: 22px;
 `
 const Ico = styled.div`
-    margin-left: 120px;
+    margin-left: 100px;
     margin-top: 3px;
     font-size: 22px;
 `

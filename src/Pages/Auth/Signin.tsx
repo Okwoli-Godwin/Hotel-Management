@@ -19,7 +19,7 @@ const Signin = () => {
 
     const schema: any = yup
         .object({
-            email: yup.string().required("Email is required").email('Invalid Email'),
+            username: yup.string().required("Email is required").email('Invalid Email'),
             password: yup.string().required("Password is required"),
         })
         .required();
@@ -85,7 +85,7 @@ const Signin = () => {
             <Emailhold>
                 <h3>Email address</h3>
                 <input 
-                    {...register("email")}
+                    {...register("username")}
                     required
                     type="email" 
                     placeholder="Enter your email"
